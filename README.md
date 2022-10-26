@@ -1,19 +1,19 @@
-osTicket-telegram
+Ticket-telegram
 ==============
-An plugin for [osTicket](https://osticket.com) which posts notifications to a [Telegram](https://telegram.org) channel/chat/group.
+Một plugin dùng cho [osTicket](https://osticket.com) thông báo lên kênh trò chuyện/nhóm [Telegram](https://telegram.org).
 
 ## Note
-This project is maintained for me, and tested on 1.15.2.
+Dự án này được duy trì và được thử nghiệm trên phiên bản 1.15.8.
 
 Install
 --------
-Clone this repo or download the zip file and place the contents into your `include/plugins` folder.
-Insert Telegrams Bot URL for your bot (ex. `https://api.telegram.org/bot<token>/`) and Chat ID (only numbers).
+Tải xuống tệp zip và chép nội dung vào thư mục 'include / plugins' bạn.
+Chèn URL Bot Telegram cho bot của bạn (vd. 'https://api.telegram.org/bot<token>/') và Chat ID (chỉ dùng số dương).
 
-For more information about Telegram Bot, see: https://core.telegram.org/bots/api
+Để biết thêm thông tin về Telegram Bot, hãy xem: https://core.telegram.org/bots/api
 
 Info
 ------
-This plugin uses CURL and tested on osTicket-1.15.2
+Plugin này sử dụng CURL và được thử nghiệm trên osTicket-1.15.8
 
-Based on [thammanna/osticket-slack](https://github.com/thammanna/osticket-slack)
+Dựa trên [thammanna/osticket-slack](https://github.com/thammanna/osticket-slack)
