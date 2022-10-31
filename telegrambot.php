@@ -20,6 +20,45 @@ class TelegramPlugin extends Plugin {
 		$createdBy = $ticket->getName()." (".$ticket->getEmail().")";
         $assignee = $ticket->getAssignee() ?: 'No assignee';
 		$chatid = $this->getConfig()->get('telegram-chat-id');
+		
+		
+		/*********************************************************************
+		Code thử theo Dept - Thành
+		**********************************************************************/
+		$dept = $ticket->getDept();
+		switch($dept) {
+			case "BCH":
+				$chatid = 866940812;
+				break;
+			case "CCH":
+				$chatid = 850840199;
+				break;
+			case "CLO":
+				$chatid = 865140049;
+				break;
+			case "GDI":
+				$chatid = 651005885;
+				break;
+			case "HMO":
+				$chatid = 841170293;
+				break;
+			case "SGN":
+				$chatid = 722509217;
+				break;
+			case "NSG":
+				$chatid = 748022409;
+				break;
+			case "TBI":
+				$chatid = 667967061;
+				break;
+			case "TDU":
+				$chatid = 849177554;
+				break;
+		}
+		/*********************************************************************
+		End - Thành
+		**********************************************************************/
+
 		$chatid = is_numeric($chatid)?"-".$chatid:"@".$chatid;
         if ($this->getConfig()->get('telegram-include-body')) {
             $body = $ticket->getLastMessage()->getMessage() ?: 'No content';
